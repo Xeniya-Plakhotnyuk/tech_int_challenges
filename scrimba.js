@@ -134,3 +134,25 @@ Example output: true
   
 
 // console.log(sumArray(studentCount));
+
+const gameNightFood = {
+    "🍕 pizza": 3, 
+    "🌮 tacos": 10, 
+    "🥗 salads": 17,
+    "🍝 pasta": 5
+}
+
+function findTheWinner(obj){
+let winnerVotes = 0
+let winnerValue = ''
+
+for (let food in obj){
+    if(obj[food] > winnerVotes){
+        winnerVotes = obj[food]
+        winnerValue = food
+    }
+}
+return winnerValue
+}
+
+console.log(findTheWinner(gameNightFood));
